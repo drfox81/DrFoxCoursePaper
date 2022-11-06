@@ -1,4 +1,5 @@
 import java.lang.reflect.Array;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,6 +29,7 @@ public class Main {
         Employee.list(employee);
         System.out.println("======+++++=====задания Повышенная сложность ====================");
         Employee dep = new Employee();
+
         Employee.upSalaryPercent(employee, 50);// увеличение зп на хх%
         Employee.minSalary(dep.departamentNumber(employee, 1));//поиск мин зп в отделе
         Employee.newChapter();
@@ -48,6 +50,32 @@ public class Main {
         Employee.salaryUp(employee, 70000);//вывод списка сотрудников с зп выше уровня
         Employee.newChapter();
         Employee.salaryDown(employee, 70000);//вывод списка сотрудников с зп ниже уровня
+        System.out.println(Employee.getCounter());
+
+        EmployeeBook employeeBook = new EmployeeBook();
+
+        employeeBook.creatEmployee("Петров Сергей", 1, 60_000);
+        employeeBook.creatEmployee("Петровww Сергей2", 4, 90_000);
+        employeeBook.creatEmployee("Петровww Сергей3", 1, 60_000);
+        employeeBook.creatEmployee("Петровww Сергей4", 2, 60_000);
+        employeeBook.creatEmployee("Петровww Сергей5", 1, 30_000);
+        employeeBook.creatEmployee("Петровww Сергей6", 1, 60_000);
+        employeeBook.creatEmployee("Петровww Сергей7", 3, 60_000);
+        employeeBook.creatEmployee("Петровww Сергей8", 2, 10_000);
+        employeeBook.creatEmployee("Петровww Сергей9", 1, 60_000);
+        employeeBook.creatEmployee("Петровww Сергей10", 5, 60_000);
+        employeeBook.removeIdEmployee(9);
+        /*employeeBook.listDep();
+        employeeBook.removeNameEmpolyee("Петровww Сергей10");
+         */
+        employeeBook.list();
+        //employeeBook.salaryDown(40000);
+        //employeeBook.salaryUp(40000);
+        //System.out.println(employeeBook.amountOfSalarisMounth());
+        //System.out.println(employeeBook.amountOfSalarisMounth(employeeBook.departamentNumber(1)));
+        employeeBook.salaryChange("Петровww Сергей9", 100_000,4);
+        employeeBook.list();
+        employeeBook.listByDepartament();
 
 
 

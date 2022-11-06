@@ -8,6 +8,8 @@ public class Employee {
     private static int counter = 1;
     private int id;
 
+    //private static Employee[] employee = new Employee[10];
+
     public Employee(String worker, int departament, int salary) {
         this.worker = worker;
         this.departament = departament;
@@ -56,6 +58,7 @@ public class Employee {
                 + salary + " рублей. || ID: " + id;
     }
 
+    //печатаем список сотрудников
     public static void listName(Employee[] employee) {
         for (int i = 0; i < employee.length; i++) {
             if (employee[i] != null) {
